@@ -2,10 +2,12 @@
  *
  * Usage:
  * - compile openssl with coverage and asan:
- *   CC="clang -fsanitize-coverage=trace-pc-guard -fsanitize=address -g" ./config
+ *   CC="clang -fsanitize-coverage=trace-pc-guard -fsanitize=address -g" \
+ * ./config
  * - get libFuzzer.a (see libfuzzer.info)
  * - compile fuzz target:
- *   clang++ -fsanitize=address -fsanitize-coverage=trace-pc-guard libfuzzer-openssl-uni2asc.cpp libcrypto.a libFuzzer.a
+ *   clang++ -fsanitize=address -fsanitize-coverage=trace-pc-guard \
+ * libfuzzer-openssl-uni2asc.cpp libcrypto.a libFuzzer.a
  */
 
 #include <openssl/pkcs12.h>
